@@ -1,0 +1,867 @@
+options:
+  parameters:
+    author: marko
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: projekt
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: 3e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 16.0]
+    rotation: 0
+    state: enabled
+- name: sym_durration
+  id: variable
+  parameters:
+    comment: ''
+    value: 305e-6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 24.0]
+    rotation: 0
+    state: true
+- name: analog_sig_source_x_0
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    freq: 300e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    showports: 'False'
+    type: complex
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [768, 8.0]
+    rotation: 0
+    state: enabled
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '8'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 384.0]
+    rotation: 0
+    state: true
+- name: blocks_multiply_xx_0_4_0_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 304.0]
+    rotation: 0
+    state: true
+- name: blocks_repeat_0
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 168.0]
+    rotation: 0
+    state: true
+- name: blocks_repeat_0_3
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [264, 336.0]
+    rotation: 0
+    state: true
+- name: blocks_repeat_0_4
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [272, 544.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repeat_0_4_0
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [288, 664.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repeat_0_4_0_0
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [296, 944.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repeat_0_4_0_0_0
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [288, 752.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repeat_0_4_0_0_1
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [288, 832.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repeat_0_5
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate*sym_durration)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 440.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 280.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 152.0]
+    rotation: 0
+    state: true
+- name: blocks_vector_source_x_0_1
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 304.0]
+    rotation: 0
+    state: true
+- name: blocks_vector_source_x_1
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 400.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [0, 520.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1_0_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 656.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1_0_0_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [40, 960.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1_0_0_0_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 760.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1_0_0_0_1
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ()
+    type: complex
+    vector: (1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 864.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_0
+  id: epy_block
+  parameters:
+    _source_code: "\nimport numpy as np\nfrom gnuradio import gr\nimport keyboard\n\
+      \n\nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"s\") and keyboard.is_pressed(\"\
+      d\") == False and keyboard.is_pressed(\"w\") == False and keyboard.is_pressed(\"\
+      a\") == False:\n            output_items[0][:] = input_items[0] \n         \
+      \   return len(output_items[0])\n        else :\n            output_items[0][:]\
+      \ = 0\n            return len(output_items[0])\n            \n        return\
+      \ len(output_items[0])\n\n        \n     \n\n        \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 352.0]
+    rotation: 0
+    state: true
+- name: epy_block_0_1
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"a\") and keyboard.is_pressed(\"\
+      d\") == False and keyboard.is_pressed(\"s\") == False and keyboard.is_pressed(\"\
+      w\") == False:\n            output_items[0][:] = input_items[0] \n         \
+      \   return len(output_items[0])\n        else :\n            output_items[0][:]\
+      \ = 0\n            return len(output_items[0])\n            \n        return\
+      \ len(output_items[0])\n\n        \n     \n\n        \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 472.0]
+    rotation: 0
+    state: true
+- name: epy_block_0_2
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"d\") and keyboard.is_pressed(\"\
+      w\") == False and keyboard.is_pressed(\"s\") == False and keyboard.is_pressed(\"\
+      a\") == False:\n            output_items[0][:] = input_items[0] \n         \
+      \   return len(output_items[0])\n        else :\n            output_items[0][:]\
+      \ = 0\n            return len(output_items[0])\n            \n        return\
+      \ len(output_items[0])\n\n        \n     \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 544.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_2_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"d\") and keyboard.is_pressed(\"\
+      w\") and keyboard.is_pressed(\"s\") == False and keyboard.is_pressed(\"a\")\
+      \ == False:\n            output_items[0][:] = input_items[0] \n            return\
+      \ len(output_items[0])\n        else :\n            output_items[0][:] = 0\n\
+      \            return len(output_items[0])\n            \n        return len(output_items[0])\n\
+      \n        \n     \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [488, 624.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_2_1
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"a\") and keyboard.is_pressed(\"\
+      w\") and keyboard.is_pressed(\"s\") == False and keyboard.is_pressed(\"d\")\
+      \ == False:\n            output_items[0][:] = input_items[0] \n            return\
+      \ len(output_items[0])\n        else :\n            output_items[0][:] = 0\n\
+      \            return len(output_items[0])\n            \n        return len(output_items[0])\n\
+      \n        \n     \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [488, 712.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_2_2
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"a\") and keyboard.is_pressed(\"\
+      s\") and keyboard.is_pressed(\"w\") == False and keyboard.is_pressed(\"d\")\
+      \ == False:\n            output_items[0][:] = input_items[0] \n            return\
+      \ len(output_items[0])\n        else :\n            output_items[0][:] = 0\n\
+      \            return len(output_items[0])\n            \n        return len(output_items[0])\n\
+      \n        \n     \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 888.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_2_3
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport keyboard\n\n\
+      \nclass blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
+      \ interp_block\n    \"\"\"Embedded Python Block example - a simple multiply\
+      \ const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only default\
+      \ arguments here\n        \"\"\"arguments to this function show up as parameters\
+      \ in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n       \
+      \     name='Embedded Python Block',   # will show up in GRC\n            in_sig=[np.complex64],\n\
+      \            out_sig=[np.complex64]\n        )\n        # if an attribute with\
+      \ the same name as a parameter is found,\n        # a callback is registered\
+      \ (properties work, too).\n        self.example_param = example_param\n\n  \
+      \  def work(self, input_items, output_items):\n        \"\"\"example: multiply\
+      \ with constant\"\"\"\n        if keyboard.is_pressed(\"d\") and keyboard.is_pressed(\"\
+      s\") and keyboard.is_pressed(\"w\") == False and keyboard.is_pressed(\"a\")\
+      \ == False:\n            output_items[0][:] = input_items[0] \n            return\
+      \ len(output_items[0])\n        else :\n            output_items[0][:] = 0\n\
+      \            return len(output_items[0])\n            \n        return len(output_items[0])\n\
+      \n        \n     \n     \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 800.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_3
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nfrom keyboard import\
+      \ is_pressed\n\n\nclass blk(gr.sync_block):  # other base classes are basic_block,\
+      \ decim_block, interp_block\n    \"\"\"Embedded Python Block example - a simple\
+      \ multiply const\"\"\"\n\n    def __init__(self, example_param=1.0):  # only\
+      \ default arguments here\n        \"\"\"arguments to this function show up as\
+      \ parameters in GRC\"\"\"\n        gr.sync_block.__init__(\n            self,\n\
+      \            name='Embedded Python Block',   # will show up in GRC\n       \
+      \     in_sig=[np.complex64],\n            out_sig=[np.complex64]\n        )\n\
+      \        # if an attribute with the same name as a parameter is found,\n   \
+      \     # a callback is registered (properties work, too).\n        self.example_param\
+      \ = example_param\n\n    def work(self, input_items, output_items):\n      \
+      \  \"\"\"example: multiply with constant\"\"\"\n        if is_pressed(\"w\"\
+      ) and is_pressed(\"d\") == False and is_pressed(\"s\") == False and is_pressed(\"\
+      a\") == False:\n            output_items[0][:] = input_items[0] \n         \
+      \   return len(output_items[0])\n        \n        output_items[0][:] = 0\n\
+      \            \n        return len(output_items[0])\n\n        \n     \n\n  \
+      \      \n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    example_param: '1.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Embedded Python Block', 'blk', [('example_param', '1.0')], [('0',
+      'complex', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['example_param'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [456, 168.0]
+    rotation: 0
+    state: true
+- name: qtgui_freq_sink_x_0_0
+  id: qtgui_freq_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '0.1'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    ctrlpanel: 'False'
+    fc: 27e6
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    label: Relative Gain
+    label1: ''
+    label10: ''''''
+    label2: ''''''
+    label3: ''''''
+    label4: ''''''
+    label5: ''''''
+    label6: ''''''
+    label7: ''''''
+    label8: ''''''
+    label9: ''''''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    norm_window: 'False'
+    showports: 'False'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_tag: '""'
+    type: complex
+    units: dB
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    wintype: window.WIN_BLACKMAN_hARRIS
+    ymax: '10'
+    ymin: '-140'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1296, 248.0]
+    rotation: 0
+    state: enabled
+- name: soapy_hackrf_sink_0
+  id: soapy_hackrf_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: 'True'
+    bandwidth: '0'
+    center_freq: 27e6
+    comment: ''
+    dev_args: hackfr
+    samp_rate: samp_rate
+    type: fc32
+    vga: '100'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1296, 368.0]
+    rotation: 0
+    state: true
+
+connections:
+- [analog_sig_source_x_0, '0', blocks_multiply_xx_0_4_0_0, '0']
+- [blocks_add_xx_0, '0', blocks_multiply_xx_0_4_0_0, '1']
+- [blocks_multiply_xx_0_4_0_0, '0', blocks_throttle2_0, '0']
+- [blocks_repeat_0, '0', epy_block_0_3, '0']
+- [blocks_repeat_0_3, '0', epy_block_0_0, '0']
+- [blocks_repeat_0_4, '0', epy_block_0_2, '0']
+- [blocks_repeat_0_4_0, '0', epy_block_0_2_0, '0']
+- [blocks_repeat_0_4_0_0, '0', epy_block_0_2_2, '0']
+- [blocks_repeat_0_4_0_0_0, '0', epy_block_0_2_1, '0']
+- [blocks_repeat_0_4_0_0_1, '0', epy_block_0_2_3, '0']
+- [blocks_repeat_0_5, '0', epy_block_0_1, '0']
+- [blocks_throttle2_0, '0', qtgui_freq_sink_x_0_0, '0']
+- [blocks_throttle2_0, '0', soapy_hackrf_sink_0, '0']
+- [blocks_vector_source_x_0, '0', blocks_repeat_0, '0']
+- [blocks_vector_source_x_0_1, '0', blocks_repeat_0_3, '0']
+- [blocks_vector_source_x_1, '0', blocks_repeat_0_5, '0']
+- [blocks_vector_source_x_1_0, '0', blocks_repeat_0_4, '0']
+- [blocks_vector_source_x_1_0_0, '0', blocks_repeat_0_4_0, '0']
+- [blocks_vector_source_x_1_0_0_0, '0', blocks_repeat_0_4_0_0, '0']
+- [blocks_vector_source_x_1_0_0_0_0, '0', blocks_repeat_0_4_0_0_0, '0']
+- [blocks_vector_source_x_1_0_0_0_1, '0', blocks_repeat_0_4_0_0_1, '0']
+- [epy_block_0_0, '0', blocks_add_xx_0, '1']
+- [epy_block_0_1, '0', blocks_add_xx_0, '2']
+- [epy_block_0_2, '0', blocks_add_xx_0, '3']
+- [epy_block_0_2_0, '0', blocks_add_xx_0, '4']
+- [epy_block_0_2_1, '0', blocks_add_xx_0, '5']
+- [epy_block_0_2_2, '0', blocks_add_xx_0, '7']
+- [epy_block_0_2_3, '0', blocks_add_xx_0, '6']
+- [epy_block_0_3, '0', blocks_add_xx_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.9.2
